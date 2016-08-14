@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script language="JavaScript" src="jquery-1.11.1.min.js"></script>
+    <script>
+        function test(){
+            var data = "a";
+            $.ajax({
+                url:'index.php',
+                data:data,
+                dataType:'json',
+                type:'post',
+                success:function(){
+                    alert('yes');
+                },
+                error:function(){
+                    alert('404');
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <div id="sex" onclick="test()">男的</div>
+</body>
+</html>
